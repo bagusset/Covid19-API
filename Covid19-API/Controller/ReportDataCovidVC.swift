@@ -12,19 +12,15 @@ class ReportDataCovidVC: UIViewController {
     
     @IBOutlet weak var reportDataTableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var totalCountryLabel: UILabel!
     @IBOutlet weak var statusSegmentedControl: UISegmentedControl!
     
     private var viewModel = CovidDataViewModels()
     var getDataCountry : countries!
-   
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-        //loadd()
-        dateLabel.text = getDataCountry?.Date
-       
+        dates()
     }
     
     @IBAction func statusSegmentedPressed(_ sender: Any) {
@@ -32,25 +28,18 @@ class ReportDataCovidVC: UIViewController {
     }
     
     
-    
     private func loadData(){
         viewModel.fecthDataCountry { [weak self] in
             self?.reportDataTableView.reloadData()
             self?.reportDataTableView.dataSource = self
         }
-       
+        
     }
-    
-    
-    
-    func setGlobalValue(_ countriesData : countries){
-        getDataGlobal(date: countriesData.Date)
-
-    }
-
-    func getDataGlobal(date : String?){
-        self.dateLabel.text = convertedDateFormater(date)
-        //self.totalCountryLabel.text = totalCountry
+    func dates(){
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateLabel.text = dateFormatter.string(from: date)
     }
     
     func convertedDateFormater(_ date: String?) -> String {
@@ -65,9 +54,6 @@ class ReportDataCovidVC: UIViewController {
         }
         return fixDate
     }
-    
- 
-    
 }
 
 extension ReportDataCovidVC: UITableViewDelegate, UITableViewDataSource {
@@ -83,17 +69,17 @@ extension ReportDataCovidVC: UITableViewDelegate, UITableViewDataSource {
         
         if statusSegmentedControl.selectedSegmentIndex == 0 {
             cell.setCellValueOfConfirmed(dataCovid)
+            cell.descriptionLabel.textColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         } else if statusSegmentedControl.selectedSegmentIndex == 1 {
             cell.setCellValueOfRecovered(dataCovid)
+            cell.descriptionLabel.textColor = #colorLiteral(red: 0.007044891827, green: 0.885907352, blue: 0.1369796097, alpha: 1)
         } else if statusSegmentedControl.selectedSegmentIndex == 2{
             cell.setCellValueOfDeaths(dataCovid)
+            cell.descriptionLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         }
-       
+        
         return cell
         
     }
-    
-    
-    
     
 }

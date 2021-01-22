@@ -84,19 +84,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwm-61-8k9">
-                                <rect key="frame" x="72" y="110" width="127" height="21"/>
+                                <rect key="frame" x="72" y="110" width="38" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUY-7u-qLq">
-                                <rect key="frame" x="356" y="110" width="38" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Country :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVV-PX-xRd">
-                                <rect key="frame" x="235" y="110" width="117" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HhG-yt-cnU">
@@ -120,21 +109,15 @@
                             <constraint firstItem="HhG-yt-cnU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="FgR-67-1ce"/>
                             <constraint firstItem="HhG-yt-cnU" firstAttribute="top" secondItem="Kwm-61-8k9" secondAttribute="bottom" constant="13" id="FwO-zJ-gBP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6pi-Tp-qHw" secondAttribute="trailing" constant="187" id="Fx1-up-GcS"/>
-                            <constraint firstItem="TVV-PX-xRd" firstAttribute="leading" secondItem="Kwm-61-8k9" secondAttribute="trailing" constant="36" id="Gx6-W5-mZa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kwm-61-8k9" secondAttribute="trailing" constant="304" id="HSa-VT-Ydd"/>
                             <constraint firstItem="6pi-Tp-qHw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JK7-q4-tL3"/>
                             <constraint firstItem="uIz-l7-aBB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LQd-00-UcZ"/>
-                            <constraint firstItem="HhG-yt-cnU" firstAttribute="top" secondItem="vUY-7u-qLq" secondAttribute="bottom" constant="13" id="Q14-E9-E9W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ow8-WY-c8Y" secondAttribute="trailing" id="SrE-oN-lFt"/>
                             <constraint firstItem="Kwm-61-8k9" firstAttribute="leading" secondItem="uIz-l7-aBB" secondAttribute="trailing" constant="5" id="Srv-ih-eoR"/>
                             <constraint firstItem="HhG-yt-cnU" firstAttribute="top" secondItem="uIz-l7-aBB" secondAttribute="bottom" constant="13" id="Uwf-Ox-bCu"/>
-                            <constraint firstItem="HhG-yt-cnU" firstAttribute="top" secondItem="TVV-PX-xRd" secondAttribute="bottom" constant="13" id="YcB-qx-LTK"/>
-                            <constraint firstItem="vUY-7u-qLq" firstAttribute="leading" secondItem="TVV-PX-xRd" secondAttribute="trailing" constant="4" id="bOW-dY-pUw"/>
-                            <constraint firstItem="TVV-PX-xRd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="dtm-ff-DX1"/>
                             <constraint firstItem="Kwm-61-8k9" firstAttribute="top" secondItem="6pi-Tp-qHw" secondAttribute="bottom" constant="8" id="ebl-Wx-LJm"/>
-                            <constraint firstItem="vUY-7u-qLq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="jD0-1I-kAg"/>
                             <constraint firstItem="ow8-WY-c8Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n9a-V1-jqX"/>
                             <constraint firstItem="6pi-Tp-qHw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="oLp-j4-X9q"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vUY-7u-qLq" secondAttribute="trailing" constant="20" id="pga-Rb-OzS"/>
                             <constraint firstItem="uIz-l7-aBB" firstAttribute="top" secondItem="6pi-Tp-qHw" secondAttribute="bottom" constant="8" id="rfc-jU-dTM"/>
                         </constraints>
                     </view>
@@ -142,7 +125,6 @@
                         <outlet property="dateLabel" destination="Kwm-61-8k9" id="rRV-5R-l75"/>
                         <outlet property="reportDataTableView" destination="ow8-WY-c8Y" id="yBL-mu-mA4"/>
                         <outlet property="statusSegmentedControl" destination="HhG-yt-cnU" id="V4x-yO-n9F"/>
-                        <outlet property="totalCountryLabel" destination="vUY-7u-qLq" id="hYB-kj-3TJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

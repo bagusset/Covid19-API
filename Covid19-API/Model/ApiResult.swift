@@ -8,7 +8,7 @@
 import Foundation
 
 struct covid19Data : Decodable {
-   
+    
     let Global : global
     let Countries : [countries]
     
@@ -34,7 +34,7 @@ struct global : Decodable {
         case TotalDeaths = "TotalDeaths"
         case NewRecovered = "NewRecovered"
         case TotalRecovered = "TotalRecovered"
-           
+        
     }
 }
 
@@ -50,7 +50,7 @@ struct countries : Decodable {
     let NewRecovered : Int?
     let TotalRecovered : Int?
     let Date : String?
-   
+    
     
     private enum CodingKeys: String, CodingKey{
         case Country = "Country"
@@ -63,6 +63,6 @@ struct countries : Decodable {
         case NewRecovered = "NewRecovered"
         case TotalRecovered = "TotalRecovered"
         case Date = "Date"
-       
+        
     }
 }
