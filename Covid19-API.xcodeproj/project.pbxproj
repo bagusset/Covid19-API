@@ -84,6 +84,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F7F338A25BA52DB00AD95A7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0FEED59F25B9C2EC005DA9EE /* ApiService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0F7F338B25BA52E400AD95A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F9332DA25B865EB00D95289 /* Main.storyboard */,
+				0F27A9EA25B9D307008CF5FF /* ReportDataCovidCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F7F338F25BA52F100AD95A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F2E3C8625B93A5E0053E20C /* ApiResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F7F339025BA530500AD95A7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F27A9E525B9CF6F008CF5FF /* CovidDataViewModels.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0F7F339125BA532900AD95A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F9332D825B865EB00D95289 /* ReportDataCovidVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		0F9332C825B865EB00D95289 = {
 			isa = PBXGroup;
 			children = (
@@ -107,14 +148,13 @@
 		0F9332D325B865EB00D95289 /* Covid19-API */ = {
 			isa = PBXGroup;
 			children = (
+				0F7F339125BA532900AD95A7 /* Controller */,
+				0F7F339025BA530500AD95A7 /* ViewModel */,
+				0F7F338F25BA52F100AD95A7 /* Model */,
+				0F7F338B25BA52E400AD95A7 /* View */,
+				0F7F338A25BA52DB00AD95A7 /* Networking */,
 				0F9332D425B865EB00D95289 /* AppDelegate.swift */,
 				0F9332D625B865EB00D95289 /* SceneDelegate.swift */,
-				0F9332D825B865EB00D95289 /* ReportDataCovidVC.swift */,
-				0F2E3C8625B93A5E0053E20C /* ApiResult.swift */,
-				0F27A9E525B9CF6F008CF5FF /* CovidDataViewModels.swift */,
-				0FEED59F25B9C2EC005DA9EE /* ApiService.swift */,
-				0F9332DA25B865EB00D95289 /* Main.storyboard */,
-				0F27A9EA25B9D307008CF5FF /* ReportDataCovidCell.swift */,
 				0F9332DD25B865EB00D95289 /* Assets.xcassets */,
 				0F9332DF25B865EB00D95289 /* LaunchScreen.storyboard */,
 				0F9332E225B865EB00D95289 /* Info.plist */,

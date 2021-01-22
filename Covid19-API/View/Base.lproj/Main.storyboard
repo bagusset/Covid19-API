@@ -16,14 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HhG-yt-cnU">
-                                <rect key="frame" x="20" y="116" width="374" height="32"/>
-                                <segments>
-                                    <segment title="Confirmed"/>
-                                    <segment title="Recovered"/>
-                                    <segment title="Deaths"/>
-                                </segments>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Covid19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pi-Tp-qHw">
                                 <rect key="frame" x="20" y="62" width="207" height="40"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
@@ -31,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ow8-WY-c8Y">
-                                <rect key="frame" x="0.0" y="154" width="414" height="742"/>
+                                <rect key="frame" x="0.0" y="185" width="414" height="711"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="73" id="mpn-9L-bqG" customClass="ReportDataCovidCell" customModule="Covid19_API" customModuleProvider="target">
@@ -85,20 +77,62 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="l4c-Z4-Gkx"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIz-l7-aBB">
+                                <rect key="frame" x="20" y="110" width="47" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwm-61-8k9">
+                                <rect key="frame" x="72" y="110" width="127" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUY-7u-qLq">
+                                <rect key="frame" x="356" y="110" width="38" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Country :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVV-PX-xRd">
+                                <rect key="frame" x="235" y="110" width="117" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HhG-yt-cnU">
+                                <rect key="frame" x="15" y="144" width="379" height="32"/>
+                                <segments>
+                                    <segment title="Confirmed"/>
+                                    <segment title="Recovered"/>
+                                    <segment title="Deaths"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ow8-WY-c8Y" firstAttribute="top" secondItem="HhG-yt-cnU" secondAttribute="bottom" constant="7" id="1fD-EN-Y2K"/>
                             <constraint firstItem="ow8-WY-c8Y" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="5JQ-z5-EHb"/>
+                            <constraint firstItem="ow8-WY-c8Y" firstAttribute="top" secondItem="HhG-yt-cnU" secondAttribute="bottom" constant="10" id="Ach-fM-EQq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HhG-yt-cnU" secondAttribute="trailing" constant="20" id="Akw-9B-EQr"/>
-                            <constraint firstItem="HhG-yt-cnU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FgR-67-1ce"/>
+                            <constraint firstItem="HhG-yt-cnU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="FgR-67-1ce"/>
+                            <constraint firstItem="HhG-yt-cnU" firstAttribute="top" secondItem="Kwm-61-8k9" secondAttribute="bottom" constant="13" id="FwO-zJ-gBP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6pi-Tp-qHw" secondAttribute="trailing" constant="187" id="Fx1-up-GcS"/>
+                            <constraint firstItem="TVV-PX-xRd" firstAttribute="leading" secondItem="Kwm-61-8k9" secondAttribute="trailing" constant="36" id="Gx6-W5-mZa"/>
                             <constraint firstItem="6pi-Tp-qHw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JK7-q4-tL3"/>
+                            <constraint firstItem="uIz-l7-aBB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LQd-00-UcZ"/>
+                            <constraint firstItem="HhG-yt-cnU" firstAttribute="top" secondItem="vUY-7u-qLq" secondAttribute="bottom" constant="13" id="Q14-E9-E9W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ow8-WY-c8Y" secondAttribute="trailing" id="SrE-oN-lFt"/>
-                            <constraint firstItem="HhG-yt-cnU" firstAttribute="top" secondItem="6pi-Tp-qHw" secondAttribute="bottom" constant="14" id="iWG-8k-Vxh"/>
+                            <constraint firstItem="Kwm-61-8k9" firstAttribute="leading" secondItem="uIz-l7-aBB" secondAttribute="trailing" constant="5" id="Srv-ih-eoR"/>
+                            <constraint firstItem="HhG-yt-cnU" firstAttribute="top" secondItem="uIz-l7-aBB" secondAttribute="bottom" constant="13" id="Uwf-Ox-bCu"/>
+                            <constraint firstItem="HhG-yt-cnU" firstAttribute="top" secondItem="TVV-PX-xRd" secondAttribute="bottom" constant="13" id="YcB-qx-LTK"/>
+                            <constraint firstItem="vUY-7u-qLq" firstAttribute="leading" secondItem="TVV-PX-xRd" secondAttribute="trailing" constant="4" id="bOW-dY-pUw"/>
+                            <constraint firstItem="TVV-PX-xRd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="dtm-ff-DX1"/>
+                            <constraint firstItem="Kwm-61-8k9" firstAttribute="top" secondItem="6pi-Tp-qHw" secondAttribute="bottom" constant="8" id="ebl-Wx-LJm"/>
+                            <constraint firstItem="vUY-7u-qLq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="jD0-1I-kAg"/>
                             <constraint firstItem="ow8-WY-c8Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n9a-V1-jqX"/>
                             <constraint firstItem="6pi-Tp-qHw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="oLp-j4-X9q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vUY-7u-qLq" secondAttribute="trailing" constant="20" id="pga-Rb-OzS"/>
+                            <constraint firstItem="uIz-l7-aBB" firstAttribute="top" secondItem="6pi-Tp-qHw" secondAttribute="bottom" constant="8" id="rfc-jU-dTM"/>
                         </constraints>
                     </view>
                     <connections>
@@ -111,6 +145,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
