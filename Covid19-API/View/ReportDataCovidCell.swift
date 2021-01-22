@@ -15,8 +15,16 @@ class ReportDataCovidCell: UITableViewCell {
     
     private var urlString : String = ""
     
-    func setCellValueOf(_ countriesData: countries) {
-        updateUI(country: countriesData.Country, status: "Confirmed", desc: countriesData.TotalConfirmed)
+    func setCellValueOfConfirmed(_ countriesData: countries) {
+        updateUI(country: countriesData.Country, status: "Total Confirmed :", desc: countriesData.TotalConfirmed)
+    }
+    
+    func setCellValueOfRecovered(_ countriesData: countries) {
+        updateUI(country: countriesData.Country, status: "Total Recovered :", desc: countriesData.TotalRecovered)
+    }
+    
+    func setCellValueOfDeaths(_ countriesData: countries) {
+        updateUI(country: countriesData.Country, status: "Total Deaths :", desc: countriesData.TotalDeaths)
     }
     
     private func updateUI( country: String? , status : String, desc : Int?) {
@@ -24,16 +32,4 @@ class ReportDataCovidCell: UITableViewCell {
         self.statusLabel.text = status
         self.descriptionLabel.text = String(desc!)
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-       
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        
-    }
-
 }

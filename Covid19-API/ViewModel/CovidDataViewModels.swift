@@ -35,4 +35,7 @@ class CovidDataViewModels{
     func cellForRowAt(indexPath: IndexPath) -> countries {
         return getDataCountry[indexPath.row]
     }
+    
+   
+    
 }

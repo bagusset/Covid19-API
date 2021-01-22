@@ -106,6 +106,9 @@
                                     <segment title="Recovered"/>
                                     <segment title="Deaths"/>
                                 </segments>
+                                <connections>
+                                    <action selector="statusSegmentedPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="RLJ-yh-BSY"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -136,7 +139,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="Kwm-61-8k9" id="rRV-5R-l75"/>
                         <outlet property="reportDataTableView" destination="ow8-WY-c8Y" id="yBL-mu-mA4"/>
+                        <outlet property="statusSegmentedControl" destination="HhG-yt-cnU" id="V4x-yO-n9F"/>
+                        <outlet property="totalCountryLabel" destination="vUY-7u-qLq" id="hYB-kj-3TJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

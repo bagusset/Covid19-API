@@ -49,6 +49,7 @@ struct countries : Decodable {
     let TotalDeaths : Int?
     let NewRecovered : Int?
     let TotalRecovered : Int?
+    let Date : String?
    
     
     private enum CodingKeys: String, CodingKey{
@@ -61,7 +62,7 @@ struct countries : Decodable {
         case TotalDeaths = "TotalDeaths"
         case NewRecovered = "NewRecovered"
         case TotalRecovered = "TotalRecovered"
+        case Date = "Date"
        
     }
 }
-
