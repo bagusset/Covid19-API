@@ -12,6 +12,7 @@ class ReportDataCovidCell: UITableViewCell {
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var UIBackground: UIView!
     
     private var urlString : String = ""
     
@@ -31,5 +32,6 @@ class ReportDataCovidCell: UITableViewCell {
         self.countryLabel.text = country
         self.statusLabel.text = status
         self.descriptionLabel.text = String(desc!)
+        self.UIBackground.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
 }

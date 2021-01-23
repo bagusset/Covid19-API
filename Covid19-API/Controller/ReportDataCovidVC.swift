@@ -13,6 +13,7 @@ class ReportDataCovidVC: UIViewController {
     @IBOutlet weak var reportDataTableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var statusSegmentedControl: UISegmentedControl!
+   
     
     private var viewModel = CovidDataViewModels()
     var getDataCountry : countries!
@@ -69,13 +70,25 @@ extension ReportDataCovidVC: UITableViewDelegate, UITableViewDataSource {
         
         if statusSegmentedControl.selectedSegmentIndex == 0 {
             cell.setCellValueOfConfirmed(dataCovid)
-            cell.descriptionLabel.textColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+            cell.descriptionLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            cell.countryLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            cell.statusLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            cell.UIBackground.backgroundColor = #colorLiteral(red: 1, green: 0.9545326829, blue: 0.5062153935, alpha: 1)
+            cell.UIBackground.layer.cornerRadius = 10
         } else if statusSegmentedControl.selectedSegmentIndex == 1 {
             cell.setCellValueOfRecovered(dataCovid)
-            cell.descriptionLabel.textColor = #colorLiteral(red: 0.007044891827, green: 0.885907352, blue: 0.1369796097, alpha: 1)
+            cell.descriptionLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            cell.countryLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            cell.statusLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            cell.UIBackground.backgroundColor = #colorLiteral(red: 0.5250641108, green: 1, blue: 0.6824213266, alpha: 1)
+            cell.UIBackground.layer.cornerRadius = 10
         } else if statusSegmentedControl.selectedSegmentIndex == 2{
             cell.setCellValueOfDeaths(dataCovid)
-            cell.descriptionLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+            cell.descriptionLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            cell.countryLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            cell.statusLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            cell.UIBackground.backgroundColor = #colorLiteral(red: 1, green: 0.3413342834, blue: 0, alpha: 1)
+            cell.UIBackground.layer.cornerRadius = 10
         }
         
         return cell
